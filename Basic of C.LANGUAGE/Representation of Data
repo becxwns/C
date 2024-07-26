@@ -1,0 +1,32 @@
+# 컴퓨터의 데이터 표현 방식
+
+0 1 2 3 (10진수) -> 0 1 10 11(10진수)
+ch = 1 -> 00000001
+
+# 정수와 실수
+
+1. 정수
+1바이트 기준 8비트(8자리) 중 첫 번째 비트 : 부호 비트
+127 -> 01111111
+-127 -> 127의 비트인 01111111을 반전시킨 10000000에 1을 더하면 됌 -> 10000001
+2. 실수는 지수부와 가수부로 나누어지고, 부동소수점 방식 사용
+
+# Unsigned 자료형
+
+# include <stdio.h>
+int main(void)
+{
+  char cnum = 128; // char형의 최댓값은 127입니다.
+  unsigned char u_cnum = 128;
+  short snum = 32768; // short형의 최댓값은 32767입니다.
+  unsigned short u_snum = 32678;
+
+  printf("%d\n",cnum);
+  printf("%d\n",u_cnum);
+  printf("%d\n",snum);
+  printf("%d\n",n_snum);
+
+  return 0;
+}
+
+
