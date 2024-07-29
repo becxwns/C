@@ -1,0 +1,55 @@
+# include <stdio.h>
+
+int main(void)
+{
+  int num = 10
+  num ++
+  printf("%d\n", num);
+  printf("%d\n", num+3);
+  printf("%d\n", ++num);
+  printf("%d\n", num++);
+  printf("%d\n", num);
+
+  return 0;
+}
+
+결과 추측
+11
+14
+12(++num은 1증가한 num이 출력된다)
+12(num++은 num이 출력된 후 num 값이 1증가한다)
+13 
+
+한 학생의 기말고사 성적은 
+국어 86, 영어 75, 수학 88, 사회 60, 과학 96점이다.
+평균값을 실수형으로 출력하기
+
+# include<stdio.h>
+int main(void)
+{
+	int kor = 86, eng = 75, mat = 88, soc = 60, sci = 96;
+	float avg = (kor + eng + mat + soc + sci) / 5;
+
+	printf("%.2f\n", avg);
+	return 0;
+}
+
+int 형 변수 num을 5로 초기화하고 다음 printf 함수를 세 번 호출할 때 증감연산자 사용하고,
+전위 후위 방식 설명하기
+
+실행 예
+num의 값 : 6
+num의 값 : 6
+num의 값 : 8
+
+# include<stdio.h>
+int main(void)
+{
+  int num = 5;
+  printf("num의 값 : %d\n", ++num);
+  printf("num의 값 : %d\n", num++);
+  printf("num의 값 : %d\n", ++num);
+
+  return 0;
+}
+전위 시 1증가한 num 출력, 후위 시 출력한 후 num에 1증가한 값 저장)
