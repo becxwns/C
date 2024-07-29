@@ -1,0 +1,45 @@
+1. 각 코드의 결과 예측 및 실제코드 실행하기
+// printf("10.3f, 152.49861);
+// printf("you\tcan\tmake\tit\n");
+// printf("\"Everybody say \'hello\'!\"");
+
+결과
+1
+    152.499
+you  can  make  it
+"Everybody say 'hello'!"
+
+2. C언어의 기본 입출력 함수를 이용하여 다음 결과과 나오도록 코드 작성하기
+   *
+  ***
+ *****
+*******
+
+#include <stdio.h>
+int main(void)
+{
+	printf("    *\n");
+	printf("   ***\n");
+	printf("  *****\n");
+	printf(" *******\n");
+}
+
+3. scanf 함수를 통해 3.1435를 입력했으나 printf 함수를 사용해 콘솔화면에 출력한 값은 
+다음과 같은 이유 추측하기
+값을 입력하세요 : 3.1435 (enter)
+입력 값 : 3
+# include <stdio.h>
+int main(void)
+{
+  int number;
+
+  printf("값을 입력하세요: ");
+  scanf("%d", &number);
+
+  return 0;
+}
+
+scanf를 이용한 사용자가 입력 시 실수로 값을 입력 했지만 정수값이 출력되었으면
+값을 저장하는 변수의 자료형이 정수형이기 때문이다. (소수부의 손실)
+
+
