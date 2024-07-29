@@ -1,0 +1,57 @@
+기본 출력 함수 printf
+
+제어문자 출력
+
+# include <stdio.h>
+
+int main(void)
+{
+	printf("\"I am a boy.\"\n");
+	printf("I am a \'boy\".\n");
+	printf("I\tam\ta\tboy.\n");
+	printf("I\bam a boy.\n"); // \b = backspace
+	printf("I am a boy\?\n");
+
+	return 0;
+}
+
+결과
+
+"I am a boy."
+I am a 'boy".
+I       am       a       boy.
+am a boy.
+I am a boy?
+
+기본 입력 함수 scanf
+// 반환값 무시 오류 발생 시 
+1. #define_CRT_SECURE_NO_WARNINGS
+2. scanf -> scanf_s 사용
+
+#include <stdio.h>
+
+int main(void)
+{
+	char character;
+	int inum;
+	float fnum;
+
+	scanf_s("%c", &character);
+	scanf_s("%d", &inum);
+	scanf_s("%f", &fnum);
+
+	// scanf 함수는 출력 기능이 없으므로 printf 함수를 이용
+	printf("%c %d %f\n", character, inum, fnum);
+
+	return 0;
+}
+
+결과
+
+a (enter)
+5 (enter)
+3.123456 (enter)
+a 5 3.123456
+
+scanf 함수를 통한
+
