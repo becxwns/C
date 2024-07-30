@@ -1,0 +1,55 @@
+1. 사용자로부터 나이를 입력받아 20살 이상이면 1250원, 20살 미만이면 800원을 받는 프로그램 작성하기
+# include <stdio.h>
+int main(void)
+{
+  int age, money;
+
+  printf("나이를 입력하세요: ");
+  scanf_s("%d", &age);
+
+  money = age >= 20 ? 1250 : 800;
+  printf("당신의 나이는 %d세이며, 요금은 %d원입니다.\n", age, money);
+
+  return 0;
+}
+
+scanf에서는 /n 이 필요없고, &이 필요함
+printf는 /n이 필요하고, &이 필요없음
+
+2. 사용자로부터 나이와 키를 입력받아 나이가 12살 이상이고, 키가 120cm 이상일 때만, 
+놀이기구에 탑승할 수 있게 하는 프로그램 작성하기
+
+# include <stdio.h>
+int main(void)
+{
+	int age, height, possible;
+	printf("나이를 입력하세요 : ");
+	scanf_s("%d", &age);
+
+	printf("키를 입력하세요 : ");
+	scanf_s("%d", &height);
+
+	possible = age > 12 && height >= 120;
+	
+	printf(possible? "탑승가능!": "탑승 불가능!");
+
+	return 0;
+}
+
+3. # include <stdio.h>
+
+int main(void)
+{
+  unsigned char num1 = 3; // 3: 0000 0011
+  unsigned char num2 = 24; // 24: 0001 1000
+
+  printf("%d\n", num1 << 3);
+  printf("%d\n", num2 >> 2);
+
+  return 0;
+}
+
+예상결과
+비트를 3만큼 왼쪽으로 이동시키면 0001 1000 (24)
+비트를 2만큼 오른쪽으로 이동시키면 0000 0110 (6)
+  
