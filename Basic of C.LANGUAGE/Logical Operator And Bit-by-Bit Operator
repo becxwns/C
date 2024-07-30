@@ -1,0 +1,57 @@
+1. 논리 연산자 
+- && = AND
+- || = OR
+- ! = NOT
+
+# include<stdio.h>
+int main(void)
+{
+	int num1 = 20, num2 = 10;
+	int result;
+
+	result = 1 && 1;
+	printf("result 1 : %d\n", result);
+	
+	result = num1 == 20 && num2 == 10;
+	printf("result 2: %d\n", result);
+
+	result = num1 > num2 && num1 == num2;
+	printf("result3 : %d\n", result);
+
+	return 0;
+}
+
+결과 
+result 1 : 1 (TRUE)
+result 2 : 1 (TRUE)
+result 3 : 0 (FALSE)
+
+2. 삼항 조건 연산자
+형태 : 조건 ? 결과1 : 결과 2
+
+# include<stdio.h>
+int main(void)
+{
+	int num, absolute;
+
+	printf("정수 입력: ");
+	scanf_s("%d", &num);
+
+	absolute = num > 0 ? num : num * -1;
+	printf("절댓값: %d\n", absolute);
+
+	return 0;
+}
+결과 예시
+정수 입력 : -14
+절댓값 : 14
+
+3. 비트 연산자
+& : AND
+| : OR
+^ : XOR
+~ : NOT
+
+4. 쉬프트 연산자
+a << 2 : a의 비트 값을 왼쪽으로 2칸 이동시킴
+a >> 2 : a의 비트 값을 오른쪽으로 2칸 이동시킴
