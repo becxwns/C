@@ -19,13 +19,45 @@ if, else, else if를 이용한 흐름의 분기
 
 int main(void)
 {
-  char alpha = 'A'
+  char alpha = 'A';
 
-  if(alpha == 'B');
+  if(alpha == 'B')
+    printf("alpha is B.");
 
   else 
-  printf("alpha is not B.");
+    printf("alpha is not B.");
 
   return 0;
 }
+
+if~else if~else문 동작
+
+# include <stdio.h>
+int main(void)
+{
+	char alpha = 'C';
+
+	if (alpha == 'A')
+	{
+		printf("alpha is A.\n");
+		printf("I like apple.");
+	}
+	else if (alpha == 'B')
+	{
+		printf("alpha is B.\n");
+		printf("I like banana.");
+	}
+	else if (alpha == 'C')
+	{
+		printf("alpha is C.\n");
+		printf("I like carrot.");
+	}
+	else
+	{
+		printf("I hate fruit & vegetable.");
+	}
+
+	return 0;
+}
+
 
